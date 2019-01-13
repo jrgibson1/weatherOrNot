@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Instabug
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        UITabBar.appearance().tintColor = Theme.current.tabBarTintColor
+        UITabBar.appearance().barTintColor = Theme.current.tabBarColor
+        
+        //        let navBarAppearanceProxy = UINavigationBar.appearance()
+        if UserDefaults.standard.object(forKey: "LightTheme") != nil {
+            Theme.current = UserDefaults.standard.bool(forKey: "LightTheme") ? LightTheme() : DarkTheme()
+        }
+        
+        Instabug.start(withToken: "bb7c936cb8004b2cfbd816174ad8b81a", invocationEvents: [.shake, .screenshot])
+        
         return true
     }
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

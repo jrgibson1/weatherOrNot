@@ -37,4 +37,8 @@ struct Alert {
     static func currentWeather(on vc: UIViewController) {
         showBasicAlert(on: vc, with: "Current Weather Broke", message: "Fix it")
     }
+    
+    static func codingError(on vc: UIViewController) {
+        showBasicAlert(on: vc, with: "Feature coming soon", message: "(Promise...Just need to learn to code it!)")
+    }
 }

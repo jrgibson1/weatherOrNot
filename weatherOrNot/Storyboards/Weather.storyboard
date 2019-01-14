@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.15" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HGr-k7-IEc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dOz-Ui-Pfn">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -82,7 +82,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOp-o6-8c8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2365" y="382"/>
+            <point key="canvasLocation" x="3273.913043478261" y="381.69642857142856"/>
         </scene>
         <!--WeatherV Controller-->
         <scene sceneID="ka5-7t-jeH">
@@ -98,16 +98,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4DB-Lg-gde">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vnu-ll-Hel">
-                                                <rect key="frame" x="357" y="8" width="51" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vnu-ll-Hel">
+                                                <rect key="frame" x="345" y="8" width="51" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="cgC-Qn-cpQ"/>
+                                                </constraints>
                                                 <connections>
                                                     <action selector="switchTapped:" destination="YJE-u4-Cja" eventType="valueChanged" id="PfN-RS-vCy"/>
                                                 </connections>
                                             </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R2-gh-QhQ">
-                                                <rect key="frame" x="20" y="8" width="329" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R2-gh-QhQ">
+                                                <rect key="frame" x="20" y="8" width="317" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="715-fC-VaH"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -510,7 +514,13 @@
                                             </label>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="Vnu-ll-Hel" firstAttribute="leading" secondItem="3R2-gh-QhQ" secondAttribute="trailing" constant="8" id="FlC-Jh-Hnj"/>
+                                            <constraint firstItem="3R2-gh-QhQ" firstAttribute="top" secondItem="4DB-Lg-gde" secondAttribute="top" constant="8" id="HsW-Tp-aP8"/>
+                                            <constraint firstItem="Vnu-ll-Hel" firstAttribute="top" secondItem="4DB-Lg-gde" secondAttribute="top" constant="8" id="MAd-Hh-806"/>
+                                            <constraint firstItem="Vnu-ll-Hel" firstAttribute="leading" secondItem="3R2-gh-QhQ" secondAttribute="trailing" constant="8" id="MEh-Zk-VWW"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vnu-ll-Hel" secondAttribute="trailing" constant="20" id="QZq-9U-ed6"/>
                                             <constraint firstAttribute="height" constant="1250" id="nKd-5z-BIP"/>
+                                            <constraint firstItem="3R2-gh-QhQ" firstAttribute="leading" secondItem="4DB-Lg-gde" secondAttribute="leading" constant="20" id="tpz-PL-HZC"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -587,7 +597,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2362.3188405797105" y="1413.6160714285713"/>
+            <point key="canvasLocation" x="2365" y="1228"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hz6-BA-ZwU">
@@ -681,18 +691,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibh-of-XZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3254" y="382"/>
+            <point key="canvasLocation" x="4163.768115942029" y="381.69642857142856"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="F6Y-Ui-bPL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HGr-k7-IEc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="20g-Vn-w21"/>
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="JS2-cs-dvT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="JS2-cs-dvT">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -701,13 +711,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEL-5z-MYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="382"/>
+            <point key="canvasLocation" x="2328.985507246377" y="381.69642857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uvL-Bl-7vx">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dOz-Ui-Pfn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Srj-g7-9nP">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HGr-k7-IEc" kind="relationship" relationship="viewControllers" id="7lv-Nj-zpR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhq-yw-g88" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1418.840579710145" y="381.69642857142856"/>
         </scene>
     </scenes>
     <resources>
         <image name="favouriteOutline" width="67.5" height="67.5"/>
         <namedColor name="DarkText">
-            <color red="0.67843137254901964" green="0.67843137254901964" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.86274509803921573" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

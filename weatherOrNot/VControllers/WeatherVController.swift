@@ -158,6 +158,15 @@ class WeatherVController: UIViewController {
         view.backgroundColor = Theme.current.backgroundColour
         navigationController?.navigationBar.tintColor = Theme.current.tintColour
         
+        let navigationBar = self.navigationController?.navigationBar
+        navigationBar?.barTintColor = Theme.current.backgroundColour
+        navigationBar?.isTranslucent = false
+        navigationBar?.tintColor = Theme.current.textColour
+        let miniTheme = [
+                NSAttributedString.Key.foregroundColor: Theme.current.textColour
+            ]
+        navigationBar?.largeTitleTextAttributes = miniTheme
+        
         self.dateLabel.textColor = Theme.current.textColour
         self.currentTempLabel.textColor = Theme.current.textColour
         self.variableTempLabel.textColor = Theme.current.textColour
@@ -250,21 +259,6 @@ class WeatherVController: UIViewController {
 //        }
 //
     }
-    
-//    @IBAction func favouriteBarButtonTapped(_ sender: UIButton) {
-//        if sender.titleLabel?.text == "F" {
-//            sender.pulsate()
-//            sender.setImage(UIImage(named: "Unfavourite"), for: .normal)
-////            favouriteForecast.saveLocation(location: selectedLocation)
-////            favouriteForecast.saveForecast(forecast: ForecastType.weekly)
-//        } else if sender.titleLabel?.text == "U" {
-//            sender.pulsate()
-//            sender.setImage(UIImage(named: "Favorite"), for: .normal)
-////            favouriteForecast.deleteAllFavourites()
-//        }
-//    }
-    
-    
 }
 
 extension WeatherVController: UICollectionViewDataSource, UICollectionViewDelegate {

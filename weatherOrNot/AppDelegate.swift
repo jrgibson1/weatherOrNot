@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = Theme.current.tabBarTintColor
         UITabBar.appearance().barTintColor = Theme.current.tabBarColor
         
-        //        let navBarAppearanceProxy = UINavigationBar.appearance()
         if UserDefaults.standard.object(forKey: "LightTheme") != nil {
             Theme.current = UserDefaults.standard.bool(forKey: "LightTheme") ? LightTheme() : DarkTheme()
         }

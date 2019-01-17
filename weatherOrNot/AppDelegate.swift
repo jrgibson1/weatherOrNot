@@ -16,14 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        UITabBar.appearance().tintColor = Theme.current.tabBarTintColor
-        UITabBar.appearance().barTintColor = Theme.current.tabBarColor
         
         if UserDefaults.standard.object(forKey: "LightTheme") != nil {
             Theme.current = UserDefaults.standard.bool(forKey: "LightTheme") ? LightTheme() : DarkTheme()
         }
         
-        Instabug.start(withToken: "bb7c936cb8004b2cfbd816174ad8b81a", invocationEvents: [.shake, .screenshot])
+        Instabug.start(withToken: "9badf56e68db66f58bc7b90417d08939", invocationEvents: [.shake, .screenshot])
         
         return true
     }

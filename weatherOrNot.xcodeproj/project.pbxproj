@@ -10,7 +10,6 @@
 		0A76014A71C68A0A3F45B9F7 /* Pods_weatherOrNotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6E163FE7EC4A1D2AA57781 /* Pods_weatherOrNotTests.framework */; };
 		2F35FB82AEAFA843A2DAF2EC /* Pods_weatherOrNotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DD0BCE167CD19E953364A0 /* Pods_weatherOrNotUITests.framework */; };
 		F26B54920212E875753E4220 /* Pods_weatherOrNot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BE1AAD4695557456343EF /* Pods_weatherOrNot.framework */; };
-		F314AD2E21ECB96F00560F56 /* HourlyTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314AD2D21ECB96E00560F56 /* HourlyTVController.swift */; };
 		F33A87B321E2000D0039A777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A87B221E2000D0039A777 /* AppDelegate.swift */; };
 		F33A87BA21E2000E0039A777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F33A87B921E2000E0039A777 /* Assets.xcassets */; };
 		F33A87C821E2000E0039A777 /* weatherOrNotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A87C721E2000E0039A777 /* weatherOrNotTests.swift */; };
@@ -34,11 +33,7 @@
 		F33A880A21E204DE0039A777 /* ForecastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A880921E204DE0039A777 /* ForecastManager.swift */; };
 		F33A880D21E205280039A777 /* URL_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A880C21E205280039A777 /* URL_Add.swift */; };
 		F33A880F21E205550039A777 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A880E21E205550039A777 /* ForecastData.swift */; };
-		F36715D721E8A7E3008B0AB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36715D621E8A7E3008B0AB8 /* Main.storyboard */; };
-		F36715D921E8A8E8008B0AB8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36715D821E8A8E8008B0AB8 /* Settings.storyboard */; };
 		F3B1E9B021E5D38F0024DFD0 /* HourlyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */; };
-		F3F20DA721E4715C0057B3F9 /* DaysTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F20DA621E4715C0057B3F9 /* DaysTVController.swift */; };
-		F3F20DA921E475230057B3F9 /* DaysTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F20DA821E475230057B3F9 /* DaysTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +62,6 @@
 		BC38C12B85E7AB642F483255 /* Pods-weatherOrNotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherOrNotUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weatherOrNotUITests/Pods-weatherOrNotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C26BC3FE8D41EB28633E02FF /* Pods-weatherOrNotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherOrNotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weatherOrNotTests/Pods-weatherOrNotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC96F60787134D9EDA557EBD /* Pods-weatherOrNotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherOrNotUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weatherOrNotUITests/Pods-weatherOrNotUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F314AD2D21ECB96E00560F56 /* HourlyTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTVController.swift; sourceTree = "<group>"; };
 		F33A87AF21E2000D0039A777 /* weatherOrNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherOrNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33A87B221E2000D0039A777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F33A87B921E2000E0039A777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,11 +91,7 @@
 		F33A880921E204DE0039A777 /* ForecastManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastManager.swift; sourceTree = "<group>"; };
 		F33A880C21E205280039A777 /* URL_Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Add.swift; sourceTree = "<group>"; };
 		F33A880E21E205550039A777 /* ForecastData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
-		F36715D621E8A7E3008B0AB8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		F36715D821E8A8E8008B0AB8 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCVCell.swift; sourceTree = "<group>"; };
-		F3F20DA621E4715C0057B3F9 /* DaysTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTVController.swift; sourceTree = "<group>"; };
-		F3F20DA821E475230057B3F9 /* DaysTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTVCell.swift; sourceTree = "<group>"; };
 		FD2BE1AAD4695557456343EF /* Pods_weatherOrNot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherOrNot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -254,9 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				F33A87FD21E203050039A777 /* LaunchScreen.storyboard */,
-				F36715D621E8A7E3008B0AB8 /* Main.storyboard */,
 				F33A87FE21E203050039A777 /* Weather.storyboard */,
-				F36715D821E8A8E8008B0AB8 /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -265,8 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				F33A87FB21E202FE0039A777 /* LocationsTVController.swift */,
-				F3F20DA621E4715C0057B3F9 /* DaysTVController.swift */,
-				F314AD2D21ECB96E00560F56 /* HourlyTVController.swift */,
 			);
 			path = TVControllers;
 			sourceTree = "<group>";
@@ -275,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				F33A87F921E202F90039A777 /* LocationsTVCell.swift */,
-				F3F20DA821E475230057B3F9 /* DaysTVCell.swift */,
 			);
 			path = TVCells;
 			sourceTree = "<group>";
@@ -419,10 +404,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36715D721E8A7E3008B0AB8 /* Main.storyboard in Resources */,
 				F33A87BA21E2000E0039A777 /* Assets.xcassets in Resources */,
 				F33A880021E203050039A777 /* Weather.storyboard in Resources */,
-				F36715D921E8A8E8008B0AB8 /* Settings.storyboard in Resources */,
 				F33A87F021E202A90039A777 /* uvIndexColours.xcassets in Resources */,
 				F33A87EA21E202A90039A777 /* themeColours.xcassets in Resources */,
 				F33A87FF21E203050039A777 /* LaunchScreen.storyboard in Resources */,
@@ -548,7 +531,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F20DA721E4715C0057B3F9 /* DaysTVController.swift in Sources */,
 				F33A880221E203090039A777 /* LocationData.swift in Sources */,
 				F33A880821E203100039A777 /* FavouriteManager.swift in Sources */,
 				F33A880A21E204DE0039A777 /* ForecastManager.swift in Sources */,
@@ -558,12 +540,10 @@
 				F33A87FA21E202F90039A777 /* LocationsTVCell.swift in Sources */,
 				F33A87EF21E202A90039A777 /* DarkTheme.swift in Sources */,
 				F33A880621E203100039A777 /* AlertsManager.swift in Sources */,
-				F3F20DA921E475230057B3F9 /* DaysTVCell.swift in Sources */,
 				F33A87ED21E202A90039A777 /* Theme.swift in Sources */,
 				F33A87EC21E202A90039A777 /* LightTheme.swift in Sources */,
 				F33A87F821E202F50039A777 /* WeatherVController.swift in Sources */,
 				F33A880D21E205280039A777 /* URL_Add.swift in Sources */,
-				F314AD2E21ECB96F00560F56 /* HourlyTVController.swift in Sources */,
 				F33A87B321E2000D0039A777 /* AppDelegate.swift in Sources */,
 				F33A880F21E205550039A777 /* ForecastData.swift in Sources */,
 				F33A87EE21E202A90039A777 /* ThemeProtocol.swift in Sources */,

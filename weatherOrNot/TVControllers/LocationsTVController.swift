@@ -74,6 +74,16 @@ class LocationsTVContoller: UITableViewController {
     func applyTheme() {
         view.backgroundColor = Theme.current.backgroundColour
         navigationController?.navigationBar.tintColor = Theme.current.tintColour
+        
+        let navigationBar = self.navigationController?.navigationBar
+        navigationBar?.barTintColor = Theme.current.backgroundColour
+        navigationBar?.isTranslucent = false
+        navigationBar?.tintColor = Theme.current.textColour
+        let miniTheme = [
+            NSAttributedString.Key.foregroundColor: Theme.current.textColour
+        ]
+        navigationBar?.titleTextAttributes = miniTheme
+        navigationBar?.largeTitleTextAttributes = miniTheme
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -131,7 +141,7 @@ class LocationsTVContoller: UITableViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
-        
+        Alert.codingError(on: self)
     }
     
 }

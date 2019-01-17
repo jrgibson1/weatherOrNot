@@ -12,11 +12,10 @@ import SVProgressHUD
 
 class WeatherVController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var lightToDarkSwitcher: UISwitch!
     @IBOutlet weak var currentTempLabel: UILabel!
     @IBOutlet weak var variableTempLabel: UILabel!
     @IBOutlet weak var currentSummary: UITextView!
-    @IBOutlet weak var windLabel: UILabel!
-    @IBOutlet weak var windCompassImage: UIImageView!
     @IBOutlet weak var currentForecastImage: UIImageView!
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     @IBOutlet weak var moreDetailsLabel: UILabel!
@@ -29,6 +28,9 @@ class WeatherVController: UIViewController {
     @IBOutlet weak var cloudImage: UIImageView!
     @IBOutlet weak var cloudHeading: UILabel!
     @IBOutlet weak var cloudNumber: UILabel!
+    @IBOutlet weak var windImage: UIImageView!
+    @IBOutlet weak var windHeading: UILabel!
+    @IBOutlet weak var windNumber: UILabel!
     @IBOutlet weak var precipChanceImage: UIImageView!
     @IBOutlet weak var precipChanceHeading: UILabel!
     @IBOutlet weak var precipChanceNumber: UILabel!
@@ -58,9 +60,15 @@ class WeatherVController: UIViewController {
         }
     }
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ProgressHUD()
+        
+        if let themeSwicher = defaults.value(forKey: "LightTheme") {
+            lightToDarkSwitcher.isOn = themeSwicher as! Bool
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,8 +115,8 @@ class WeatherVController: UIViewController {
                         self.feelsLikeNumber.text = "\((currentForecast!.apparentTemperature!).rounded())°"
                         self.humidityNumber.text = "\(Double((currentForecast!.humidity!)*100).rounded())%"
                         self.uvIndexNumber.text = "\(Double(currentForecast!.uvIndex!).rounded())"
-                        self.windCompassImage.image = UIImage(named: "wind-deg")
-                        self.windCompassImage.transform = CGAffineTransform(rotationAngle: CGFloat((currentForecast?.windBearing!)!))
+                        self.windImage.image = UIImage(named: "wind-deg")
+                        self.windImage.transform = CGAffineTransform(rotationAngle: CGFloat((currentForecast?.windBearing!)!))
                     })
                 }
             })
@@ -147,7 +155,7 @@ class WeatherVController: UIViewController {
                         self.sunSetNumber.text = DailyWeatherData.dateFormatter.string(from: sunset as Date)
                         self.sunRiseNumber.text = DailyWeatherData.dateFormatter.string(from: sunrise as Date)
                         self.daySummaryText.text = "\(dailyForecast.summary!)"
-                        self.windLabel.text = "Wind \(String(describing: (dailyForecast.data![0].windSpeed!).rounded()))"
+                        self.windNumber.text = "\(String(describing: (dailyForecast.data![0].windSpeed!).rounded()))"
                     })
                 }
             })
@@ -165,14 +173,15 @@ class WeatherVController: UIViewController {
         let miniTheme = [
                 NSAttributedString.Key.foregroundColor: Theme.current.textColour
             ]
+        navigationBar?.titleTextAttributes = miniTheme
         navigationBar?.largeTitleTextAttributes = miniTheme
         
         self.dateLabel.textColor = Theme.current.textColour
         self.currentTempLabel.textColor = Theme.current.textColour
         self.variableTempLabel.textColor = Theme.current.textColour
         self.currentSummary.textColor = Theme.current.textColour
-        self.windLabel.textColor = Theme.current.textColour
-        self.windCompassImage.tintColor = Theme.current.imageColour
+        self.windNumber.textColor = Theme.current.textColour
+        self.windImage.tintColor = Theme.current.imageColour
         self.currentForecastImage.tintColor = Theme.current.imageColour
         self.moreDetailsLabel.textColor = Theme.current.textColour
         self.feelsLikeImage.tintColor = Theme.current.imageColour
@@ -202,6 +211,7 @@ class WeatherVController: UIViewController {
         self.next24HoursLabel.textColor = Theme.current.textColour
         self.daySummaryText.textColor = Theme.current.textColour
         self.tapMoreDaysLabel.textColor = Theme.current.textColour
+        self.windHeading.textColor = Theme.current.textColour
 //        self.CellTimeLabel.textColor = Theme.current.textColour
 //        self.CellWeatherImage.tintColor = Theme.current.imageColour
 //        self.CellTempLabel.textColor = Theme.current.textColour
@@ -214,6 +224,7 @@ class WeatherVController: UIViewController {
         self.uvIndexImage.backgroundColor = Theme.current.imageBackgroundColour
         self.sunRiseImage.backgroundColor = Theme.current.imageBackgroundColour
         self.sunSetImage.backgroundColor = Theme.current.imageBackgroundColour
+        self.windImage.backgroundColor = Theme.current.imageBackgroundColour
     }
     
     func LabelNames() {
@@ -242,12 +253,14 @@ class WeatherVController: UIViewController {
         self.next24HoursLabel.text = "NEXT 7 DAYS"
         self.tapMoreHoursLabel.text = "TAP ABOVE FOR MORE INFORMATION"
         self.tapMoreDaysLabel.text = "TAP ABOVE FOR MORE DETAILS"
+        self.windHeading.text = "Wind Speed"
+        self.windImage.layer.cornerRadius = self.sunSetImage.frame.height / 2
     }
     
     @IBAction func switchTapped(_ sender: UISwitch) {
         Theme.current = sender.isOn ? LightTheme() : DarkTheme()
         
-        UserDefaults.standard.set(sender.isOn, forKey: "LightTheme")
+        defaults.set(sender.isOn, forKey: "LightTheme")
         applyTheme()
     }
     
@@ -259,6 +272,11 @@ class WeatherVController: UIViewController {
 //        }
 //
     }
+    
+    @IBAction func favouriteNavBarButtonTapped(_ sender: Any) {
+        Alert.codingError(on: self)
+    }
+    
 }
 
 extension WeatherVController: UICollectionViewDataSource, UICollectionViewDelegate {

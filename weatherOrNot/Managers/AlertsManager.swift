@@ -39,6 +39,6 @@ struct Alert {
     }
     
     static func codingError(on vc: UIViewController) {
-        showBasicAlert(on: vc, with: "Feature coming soon", message: "(Promise...Just need to learn to code it!)")
+        showBasicAlert(on: vc, with: "Feature coming soon", message: "I Promise 🤞🏻 \nJust need to code the damn thing 😆")
     }
 }

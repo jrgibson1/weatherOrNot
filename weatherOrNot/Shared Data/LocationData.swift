@@ -43,7 +43,7 @@ var locations: [Location] = [
     Location(locationName: "Istanbul", countryName: "Turkey", countryAbbreviation: "TUR", flag: "🇹🇷", longitude: 28.9652, latitude: 41.0096),
     Location(locationName: "London", countryName: "Great Britain", countryAbbreviation: "GBR", flag: "🇬🇧", longitude: -0.1276, latitude: 51.5073),
     Location(locationName: "Melbourne", countryName: "Australia", countryAbbreviation: "AUS", flag: "🇦🇺", longitude: 144.963058, latitude: -37.813629),
-//    Location(locationName: "nil", countryName: "nil", countryAbbreviation: "ZIP", flag: "🏳️‍🌈", longitude: 404.4, latitude: 24601),
+    Location(locationName: "Moscow", countryName: "Russia", countryAbbreviation: "RUS", flag: "🇷🇺", longitude: 37.617298, latitude: 55.755825),
     Location(locationName: "New York City", countryName: "United States of America", countryAbbreviation: "USA", flag: "🇺🇸", longitude: -73.9866, latitude: 40.7306),
     Location(locationName: "Prague", countryName: "Czech Republic", countryAbbreviation: "CZE", flag: "🇨🇿", longitude: 14.4213, latitude: 50.0875),
     Location(locationName: "Rio de Janeiro", countryName: "Brazil", countryAbbreviation: "BRA", flag: "🇧🇷", longitude: -42.4194, latitude: -22.2753),
@@ -52,6 +52,7 @@ var locations: [Location] = [
     Location(locationName: "Singapore", countryName: "Singapore", countryAbbreviation: "SGP", flag: "🇸🇬", longitude: 103.852, latitude: 1.2905),
     Location(locationName: "Sydney", countryName: "Australia", countryAbbreviation: "AUS", flag: "🇦🇺", longitude: 151.209290, latitude: -33.868820),
     Location(locationName: "Tokyo", countryName: "Japan", countryAbbreviation: "JPN", flag: "🇯🇵", longitude: 139.4049, latitude: 34.6969),
+    Location(locationName: "Toronto", countryName: "Canada", countryAbbreviation: "CAN", flag: "🇨🇦", longitude: -79.383186, latitude: 43.653225),
     Location(locationName: "Vancouver", countryName: "Canada", countryAbbreviation: "CAN", flag: "🇨🇦", longitude: -123.1155, latitude: 49.2624),
     Location(locationName: "Venice", countryName: "Italy", countryAbbreviation: "ITA", flag: "🇮🇹", longitude: 12.3346, latitude: 45.4372),
 ]

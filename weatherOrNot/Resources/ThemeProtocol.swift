@@ -15,8 +15,5 @@ protocol ThemeProtocol {
     var tintColour: UIColor { get }
     var imageBackgroundColour: UIColor { get }
     
-    var tabBarColor: UIColor { get }
-    var tabBarTintColor: UIColor { get }
-    
     var tableRowSelectionColor: UIColor { get }
 }

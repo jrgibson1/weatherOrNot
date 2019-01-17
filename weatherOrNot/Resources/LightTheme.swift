@@ -13,9 +13,6 @@ class LightTheme: ThemeProtocol {
     
     var tableRowSelectionColor: UIColor = UIColor(named: "LightTableRowSelection")!
     
-    var tabBarColor: UIColor = .blue
-    var tabBarTintColor: UIColor = .yellow
-    
     var tintColour: UIColor = UIColor(named: "DarkTint")!
     var imageColour: UIColor = UIColor(named: "DarkImage")!
     var backgroundColour: UIColor = UIColor(named: "LightBackground")!

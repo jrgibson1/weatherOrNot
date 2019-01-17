@@ -179,7 +179,7 @@
 				F33A87F621E202ED0039A777 /* VControllers */,
 				F33A87F421E202DB0039A777 /* TVControllers */,
 				F33A87F521E202E30039A777 /* TVCells */,
-				F3F0CF5721E70E40002EE3DC /* CVControllers */,
+				F3A3F2BE21F0E8B700B44FBF /* CVControllers */,
 				F3B1E9AE21E5D3710024DFD0 /* CVCells */,
 				F33A87B221E2000D0039A777 /* AppDelegate.swift */,
 				F33A87B921E2000E0039A777 /* Assets.xcassets */,
@@ -281,19 +281,19 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		F3A3F2BE21F0E8B700B44FBF /* CVControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CVControllers;
+			sourceTree = "<group>";
+		};
 		F3B1E9AE21E5D3710024DFD0 /* CVCells */ = {
 			isa = PBXGroup;
 			children = (
 				F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */,
 			);
 			path = CVCells;
-			sourceTree = "<group>";
-		};
-		F3F0CF5721E70E40002EE3DC /* CVControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CVControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

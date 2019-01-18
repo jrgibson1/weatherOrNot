@@ -170,6 +170,11 @@ class WeatherVController: UIViewController {
         navigationBar?.barTintColor = Theme.current.backgroundColour
         navigationBar?.isTranslucent = false
         navigationBar?.tintColor = Theme.current.textColour
+        
+        UITabBar.appearance().backgroundColor = Theme.current.backgroundColour
+        UITabBar.appearance().tintColor = Theme.current.tintColour
+        UITabBar.appearance().unselectedItemTintColor = .red
+        
         let miniTheme = [
                 NSAttributedString.Key.foregroundColor: Theme.current.textColour
             ]
@@ -229,32 +234,31 @@ class WeatherVController: UIViewController {
     
     func LabelNames() {
         self.moreDetailsLabel.text = "RIGHT NOW"
-        self.feelsLikeHeading.text = "Feels Like"
+        self.sunRiseImage.image = UIImage(named: "sunrise")
+        self.sunRiseImage.layer.cornerRadius = self.sunSetImage.frame.height / 2
+        self.sunRiseHeading.text = "Sunrise"
+        self.sunSetImage.image = UIImage(named: "sunset")
+        self.sunSetImage.layer.cornerRadius = self.sunSetImage.frame.height / 2
+        self.sunSetHeading.text = "Sunset"
         self.feelsLikeImage.image = UIImage(named: "thermometer")
         self.feelsLikeImage.layer.cornerRadius = feelsLikeImage.frame.height / 2
-        self.humidityHeading.text = "Humidity"
+        self.feelsLikeHeading.text = "Feels Like"
+        self.cloudImage.image = UIImage(named: "cloud")
+        self.cloudImage.layer.cornerRadius = self.cloudImage.frame.height / 2
+        self.cloudHeading.text = "Cloud \nCoverage"
         self.humidityImage.image = UIImage(named: "humidity")
         self.humidityImage.layer.cornerRadius = feelsLikeImage.frame.height / 2
-        self.uvIndexHeading.text = "UV Index"
+        self.humidityHeading.text = "Humidity"
         self.uvIndexImage.image = UIImage(named: "clear-day")
         self.uvIndexImage.layer.cornerRadius = feelsLikeImage.frame.height / 2
-        self.cloudImage.image = UIImage(named: "cloud")
-        self.cloudHeading.text = "Cloud \nCoverage"
-        self.cloudImage.layer.cornerRadius = self.cloudImage.frame.height / 2
-        self.cloudImage.layer.cornerRadius = self.cloudImage.frame.height / 2
+        self.uvIndexHeading.text = "UV Index"
+        self.windHeading.text = "Wind Speed"
+        self.windImage.layer.cornerRadius = self.sunSetImage.frame.height / 2
         self.precipChanceImage.layer.cornerRadius = self.precipChanceImage.frame.height / 2
-        self.sunSetImage.image = UIImage(named: "sunset")
-        self.sunSetHeading.text = "Sunset"
-        self.sunSetImage.layer.cornerRadius = self.sunSetImage.frame.height / 2
-        self.sunRiseImage.image = UIImage(named: "sunrise")
-        self.sunRiseHeading.text = "Sunrise"
-        self.sunRiseImage.layer.cornerRadius = self.sunSetImage.frame.height / 2
         self.thisHourLabel.text = "NEXT 24 HOURS"
         self.next24HoursLabel.text = "NEXT 7 DAYS"
         self.tapMoreHoursLabel.text = "TAP ABOVE FOR MORE INFORMATION"
         self.tapMoreDaysLabel.text = "TAP ABOVE FOR MORE DETAILS"
-        self.windHeading.text = "Wind Speed"
-        self.windImage.layer.cornerRadius = self.sunSetImage.frame.height / 2
     }
     
     @IBAction func switchTapped(_ sender: UISwitch) {

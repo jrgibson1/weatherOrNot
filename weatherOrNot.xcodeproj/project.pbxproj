@@ -10,6 +10,7 @@
 		0A76014A71C68A0A3F45B9F7 /* Pods_weatherOrNotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6E163FE7EC4A1D2AA57781 /* Pods_weatherOrNotTests.framework */; };
 		2F35FB82AEAFA843A2DAF2EC /* Pods_weatherOrNotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DD0BCE167CD19E953364A0 /* Pods_weatherOrNotUITests.framework */; };
 		F26B54920212E875753E4220 /* Pods_weatherOrNot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BE1AAD4695557456343EF /* Pods_weatherOrNot.framework */; };
+		F300324321F0F5B7005E65A7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F300324221F0F5B7005E65A7 /* Settings.storyboard */; };
 		F33A87B321E2000D0039A777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A87B221E2000D0039A777 /* AppDelegate.swift */; };
 		F33A87BA21E2000E0039A777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F33A87B921E2000E0039A777 /* Assets.xcassets */; };
 		F33A87C821E2000E0039A777 /* weatherOrNotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A87C721E2000E0039A777 /* weatherOrNotTests.swift */; };
@@ -33,6 +34,7 @@
 		F33A880A21E204DE0039A777 /* ForecastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A880921E204DE0039A777 /* ForecastManager.swift */; };
 		F33A880D21E205280039A777 /* URL_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A880C21E205280039A777 /* URL_Add.swift */; };
 		F33A880F21E205550039A777 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A880E21E205550039A777 /* ForecastData.swift */; };
+		F3A3F2C021F0F12400B44FBF /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F2BF21F0F12400B44FBF /* Start.storyboard */; };
 		F3B1E9B021E5D38F0024DFD0 /* HourlyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,7 @@
 		BC38C12B85E7AB642F483255 /* Pods-weatherOrNotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherOrNotUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weatherOrNotUITests/Pods-weatherOrNotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C26BC3FE8D41EB28633E02FF /* Pods-weatherOrNotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherOrNotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weatherOrNotTests/Pods-weatherOrNotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC96F60787134D9EDA557EBD /* Pods-weatherOrNotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherOrNotUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weatherOrNotUITests/Pods-weatherOrNotUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F300324221F0F5B7005E65A7 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F33A87AF21E2000D0039A777 /* weatherOrNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherOrNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33A87B221E2000D0039A777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F33A87B921E2000E0039A777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		F33A880921E204DE0039A777 /* ForecastManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastManager.swift; sourceTree = "<group>"; };
 		F33A880C21E205280039A777 /* URL_Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Add.swift; sourceTree = "<group>"; };
 		F33A880E21E205550039A777 /* ForecastData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
+		F3A3F2BF21F0F12400B44FBF /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCVCell.swift; sourceTree = "<group>"; };
 		FD2BE1AAD4695557456343EF /* Pods_weatherOrNot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherOrNot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -244,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				F33A87FD21E203050039A777 /* LaunchScreen.storyboard */,
+				F3A3F2BF21F0F12400B44FBF /* Start.storyboard */,
+				F300324221F0F5B7005E65A7 /* Settings.storyboard */,
 				F33A87FE21E203050039A777 /* Weather.storyboard */,
 			);
 			path = Storyboards;
@@ -407,7 +413,9 @@
 				F33A87BA21E2000E0039A777 /* Assets.xcassets in Resources */,
 				F33A880021E203050039A777 /* Weather.storyboard in Resources */,
 				F33A87F021E202A90039A777 /* uvIndexColours.xcassets in Resources */,
+				F300324321F0F5B7005E65A7 /* Settings.storyboard in Resources */,
 				F33A87EA21E202A90039A777 /* themeColours.xcassets in Resources */,
+				F3A3F2C021F0F12400B44FBF /* Start.storyboard in Resources */,
 				F33A87FF21E203050039A777 /* LaunchScreen.storyboard in Resources */,
 				F33A87EB21E202A90039A777 /* AppleDefaultTintColours.xcassets in Resources */,
 			);

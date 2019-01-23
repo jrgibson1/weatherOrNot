@@ -9,10 +9,11 @@
 import UIKit
 
 class LightTheme: ThemeProtocol {
+    var barStyle: UIBarStyle = .black
+    var preferredStatusBarStyle: UIStatusBarStyle = .default
+    
     var imageBackgroundColour: UIColor = UIColor(named: "LightImageBackground")!
-    
     var tableRowSelectionColor: UIColor = UIColor(named: "LightTableRowSelection")!
-    
     var tintColour: UIColor = UIColor(named: "DarkTint")!
     var imageColour: UIColor = UIColor(named: "DarkImage")!
     var backgroundColour: UIColor = UIColor(named: "LightBackground")!

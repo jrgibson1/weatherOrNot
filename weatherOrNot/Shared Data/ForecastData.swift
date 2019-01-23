@@ -123,7 +123,7 @@ extension Currently {
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .full
-        formatter.timeStyle = .short
+        formatter.timeStyle = .none
         return formatter
     }()
 }

@@ -17,7 +17,7 @@ class LocationsTVContoller: UITableViewController {
         navigationItem.rightBarButtonItem = editButtonItem
         
         applyTheme()
-//        whatsNewIfNeeded()
+        whatsNewIfNeeded()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,16 +31,14 @@ class LocationsTVContoller: UITableViewController {
     
     func whatsNewIfNeeded() {
         let items = [
+            WhatsNew.Item(title: "Welcome", subtitle: "Nulla facilisi. Curabitur finibus eu nisl ut eleifend.", image: UIImage(named: "WhatsNew-Launch")),
             WhatsNew.Item(title: "Powered by Dark Sky", subtitle: "Fusce eget hendrerit nibh. Ut sodales aliquet auctor. Suspendisse vitae gravida nunc.", image: UIImage(named: "WhatsNew-DarkSky")),
             WhatsNew.Item(title: "Bug Fixes", subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum fermentum lectus, eu sagittis orci dictum eget.", image: UIImage(named: "WhatsNew-Dev")),
             WhatsNew.Item(title: "Themes", subtitle: "Mauris suscipit ipsum ex, id fermentum risus bibendum ac. Fusce viverra, sem nec dignissim elementum, massa lectus iaculis nisi, eu consectetur dui sapien aliquam nisi.", image: UIImage(named: "WhatsNew-Theme")),
-            WhatsNew.Item(title: "Weather", subtitle: "Nulla facilisi. Curabitur finibus eu nisl ut eleifend.", image: UIImage(named: "WhatsNew-Weather")),
             ]
         
         let myTheme = WhatsNewViewController.Theme { configuration in
             configuration.apply(animation: .fade)
-            configuration.completionButton.title = "Ok, got it!"
-            configuration.completionButton.action = .dismiss
             configuration.itemsView.imageSize = .fixed(height: 50)
             
             configuration.titleView.titleFont = .systemFont(ofSize: 42, weight: .heavy)
@@ -50,13 +48,18 @@ class LocationsTVContoller: UITableViewController {
                 color: UIColor.whatsNewKitBlue
             )
             
+            configuration.detailButton?.title = "Test"
+            configuration.detailButton?.titleColor = Theme.current.textColour
+            configuration.detailButton?.action = .website(url: "https://www.google.com")
+            
+            configuration.completionButton.title = "Ok, got it!"
+            configuration.completionButton.action = .dismiss
+            
             configuration.backgroundColor = Theme.current.backgroundColour
             configuration.titleView.titleColor = Theme.current.textColour
             configuration.itemsView.titleColor = Theme.current.textColour
             configuration.itemsView.subtitleColor = Theme.current.textColour
         }
-        
-        
         
         let myConfig = WhatsNewViewController.Configuration(theme: myTheme)
         
@@ -84,6 +87,11 @@ class LocationsTVContoller: UITableViewController {
         ]
         navigationBar?.titleTextAttributes = miniTheme
         navigationBar?.largeTitleTextAttributes = miniTheme
+        
+        let barColor = Theme.current.backgroundColour
+        let pressedTintColor = Theme.current.tintColour
+        UITabBar.appearance().barTintColor = barColor
+        UITabBar.appearance().tintColor = pressedTintColor
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

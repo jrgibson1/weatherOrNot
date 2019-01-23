@@ -171,16 +171,18 @@ class WeatherVController: UIViewController {
         navigationBar?.isTranslucent = false
         navigationBar?.tintColor = Theme.current.textColour
         
-        UITabBar.appearance().backgroundColor = Theme.current.backgroundColour
-        UITabBar.appearance().tintColor = Theme.current.tintColour
-        UITabBar.appearance().unselectedItemTintColor = .red
-        
         let miniTheme = [
                 NSAttributedString.Key.foregroundColor: Theme.current.textColour
             ]
         navigationBar?.titleTextAttributes = miniTheme
         navigationBar?.largeTitleTextAttributes = miniTheme
+        setNeedsStatusBarAppearanceUpdate()
         
+        let barColor = Theme.current.backgroundColour
+        let pressedTintColor = Theme.current.tintColour
+        UITabBar.appearance().barTintColor = barColor
+        UITabBar.appearance().tintColor = pressedTintColor
+
         self.dateLabel.textColor = Theme.current.textColour
         self.currentTempLabel.textColor = Theme.current.textColour
         self.variableTempLabel.textColor = Theme.current.textColour

@@ -12,7 +12,6 @@
 		F26B54920212E875753E4220 /* Pods_weatherOrNot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BE1AAD4695557456343EF /* Pods_weatherOrNot.framework */; };
 		F300324321F0F5B7005E65A7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F300324221F0F5B7005E65A7 /* Settings.storyboard */; };
 		F33A87B321E2000D0039A777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A87B221E2000D0039A777 /* AppDelegate.swift */; };
-		F33A87BA21E2000E0039A777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F33A87B921E2000E0039A777 /* Assets.xcassets */; };
 		F33A87C821E2000E0039A777 /* weatherOrNotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A87C721E2000E0039A777 /* weatherOrNotTests.swift */; };
 		F33A87D321E2000E0039A777 /* weatherOrNotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A87D221E2000E0039A777 /* weatherOrNotUITests.swift */; };
 		F33A87EA21E202A90039A777 /* themeColours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F33A87E321E202A90039A777 /* themeColours.xcassets */; };
@@ -35,6 +34,8 @@
 		F33A880D21E205280039A777 /* URL_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A880C21E205280039A777 /* URL_Add.swift */; };
 		F33A880F21E205550039A777 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A880E21E205550039A777 /* ForecastData.swift */; };
 		F3A3F2C021F0F12400B44FBF /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F2BF21F0F12400B44FBF /* Start.storyboard */; };
+		F3A68C9321F1D06B0092C918 /* SettingsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A68C9221F1D06B0092C918 /* SettingsTVController.swift */; };
+		F3AEB78121F8BD88008F8A67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AEB78021F8BD88008F8A67 /* Assets.xcassets */; };
 		F3B1E9B021E5D38F0024DFD0 /* HourlyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +68,6 @@
 		F300324221F0F5B7005E65A7 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F33A87AF21E2000D0039A777 /* weatherOrNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherOrNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33A87B221E2000D0039A777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F33A87B921E2000E0039A777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F33A87BE21E2000E0039A777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F33A87C321E2000E0039A777 /* weatherOrNotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherOrNotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33A87C721E2000E0039A777 /* weatherOrNotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherOrNotTests.swift; sourceTree = "<group>"; };
@@ -95,6 +95,8 @@
 		F33A880C21E205280039A777 /* URL_Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Add.swift; sourceTree = "<group>"; };
 		F33A880E21E205550039A777 /* ForecastData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
 		F3A3F2BF21F0F12400B44FBF /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		F3A68C9221F1D06B0092C918 /* SettingsTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVController.swift; sourceTree = "<group>"; };
+		F3AEB78021F8BD88008F8A67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCVCell.swift; sourceTree = "<group>"; };
 		FD2BE1AAD4695557456343EF /* Pods_weatherOrNot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherOrNot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -186,8 +188,8 @@
 				F3A3F2BE21F0E8B700B44FBF /* CVControllers */,
 				F3B1E9AE21E5D3710024DFD0 /* CVCells */,
 				F33A87B221E2000D0039A777 /* AppDelegate.swift */,
-				F33A87B921E2000E0039A777 /* Assets.xcassets */,
 				F33A87BE21E2000E0039A777 /* Info.plist */,
+				F3AEB78021F8BD88008F8A67 /* Assets.xcassets */,
 			);
 			path = weatherOrNot;
 			sourceTree = "<group>";
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				F33A87FB21E202FE0039A777 /* LocationsTVController.swift */,
+				F3A68C9221F1D06B0092C918 /* SettingsTVController.swift */,
 			);
 			path = TVControllers;
 			sourceTree = "<group>";
@@ -410,13 +413,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F33A87BA21E2000E0039A777 /* Assets.xcassets in Resources */,
 				F33A880021E203050039A777 /* Weather.storyboard in Resources */,
 				F33A87F021E202A90039A777 /* uvIndexColours.xcassets in Resources */,
 				F300324321F0F5B7005E65A7 /* Settings.storyboard in Resources */,
 				F33A87EA21E202A90039A777 /* themeColours.xcassets in Resources */,
 				F3A3F2C021F0F12400B44FBF /* Start.storyboard in Resources */,
 				F33A87FF21E203050039A777 /* LaunchScreen.storyboard in Resources */,
+				F3AEB78121F8BD88008F8A67 /* Assets.xcassets in Resources */,
 				F33A87EB21E202A90039A777 /* AppleDefaultTintColours.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +556,7 @@
 				F33A87F821E202F50039A777 /* WeatherVController.swift in Sources */,
 				F33A880D21E205280039A777 /* URL_Add.swift in Sources */,
 				F33A87B321E2000D0039A777 /* AppDelegate.swift in Sources */,
+				F3A68C9321F1D06B0092C918 /* SettingsTVController.swift in Sources */,
 				F33A880F21E205550039A777 /* ForecastData.swift in Sources */,
 				F33A87EE21E202A90039A777 /* ThemeProtocol.swift in Sources */,
 			);

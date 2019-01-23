@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Theme.current = UserDefaults.standard.bool(forKey: "LightTheme") ? LightTheme() : DarkTheme()
         }
 
-        Instabug.start(withToken: "9badf56e68db66f58bc7b90417d08939", invocationEvents: [.shake, .screenshot])
+        Instabug.start(withToken: "9badf56e68db66f58bc7b90417d08939", invocationEvents: [.shake])
         
         return true
     }

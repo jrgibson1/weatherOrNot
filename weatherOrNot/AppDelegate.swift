@@ -20,11 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaults.standard.object(forKey: "LightTheme") != nil {
             Theme.current = UserDefaults.standard.bool(forKey: "LightTheme") ? LightTheme() : DarkTheme()
         }
+        
+        var preferredStatusBarStyle : UIStatusBarStyle {
+            return Theme.current.statusBar
+        }
 
         Instabug.start(withToken: "9badf56e68db66f58bc7b90417d08939", invocationEvents: [.shake])
         
         return true
     }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

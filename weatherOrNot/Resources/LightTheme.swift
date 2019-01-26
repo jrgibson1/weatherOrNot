@@ -9,6 +9,10 @@
 import UIKit
 
 class LightTheme: ThemeProtocol {
+    var statusBar: UIStatusBarStyle = UIStatusBarStyle.default
+    
+    var signatureImage: UIImage = UIImage(named: "JG-black")!
+    
     var barStyle: UIBarStyle = .black
     var preferredStatusBarStyle: UIStatusBarStyle = .default
     

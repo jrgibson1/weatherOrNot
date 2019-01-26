@@ -96,11 +96,11 @@
             <objects>
                 <viewController id="YJE-u4-Cja" customClass="WeatherVController" customModule="weatherOrNot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Igu-Dc-zPV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1145"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjW-d0-Ihv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1236"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1351"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4DB-Lg-gde">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1285"/>
@@ -724,7 +724,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="414" height="1285"/>
+                    <size key="freeformSize" width="414" height="1400"/>
                     <connections>
                         <outlet property="cloudHeading" destination="Y4P-p7-AKc" id="AoS-6C-AhT"/>
                         <outlet property="cloudImage" destination="R1s-HN-6tG" id="SZt-lc-otS"/>
@@ -892,7 +892,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TabBar_Weather" width="24" height="24"/>
+        <image name="TabBar_Weather" width="18.75" height="18.75"/>
         <image name="favouriteOutline" width="67.5" height="67.5"/>
         <namedColor name="DarkText">
             <color red="0.89803921568627454" green="0.86274509803921573" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

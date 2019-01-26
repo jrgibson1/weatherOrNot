@@ -17,13 +17,13 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>180122.14</string>
+	<string>180127.24</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>"Required to call support for ewatherOrNot"</string>
+	<string>&quot;Required to call support for ewatherOrNot&quot;</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>"Required to access screenshots."</string>
+	<string>&quot;Required to access screenshots.&quot;</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -44,6 +44,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<true/>
+	<false/>
 </dict>
 </plist>

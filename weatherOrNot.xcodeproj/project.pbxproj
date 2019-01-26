@@ -37,6 +37,8 @@
 		F3A68C9321F1D06B0092C918 /* SettingsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A68C9221F1D06B0092C918 /* SettingsTVController.swift */; };
 		F3AEB78121F8BD88008F8A67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AEB78021F8BD88008F8A67 /* Assets.xcassets */; };
 		F3B1E9B021E5D38F0024DFD0 /* HourlyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */; };
+		F3C4D89E21FAB4BC00CA1E34 /* SettingsVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C4D89D21FAB4BC00CA1E34 /* SettingsVController.swift */; };
+		F3C4D8A021FACC8600CA1E34 /* WhatsNewKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C4D89F21FACC8600CA1E34 /* WhatsNewKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		F3A68C9221F1D06B0092C918 /* SettingsTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVController.swift; sourceTree = "<group>"; };
 		F3AEB78021F8BD88008F8A67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCVCell.swift; sourceTree = "<group>"; };
+		F3C4D89D21FAB4BC00CA1E34 /* SettingsVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVController.swift; sourceTree = "<group>"; };
+		F3C4D89F21FACC8600CA1E34 /* WhatsNewKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewKit.swift; sourceTree = "<group>"; };
 		FD2BE1AAD4695557456343EF /* Pods_weatherOrNot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherOrNot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,6 +246,7 @@
 			children = (
 				F33A880121E203090039A777 /* LocationData.swift */,
 				F33A880E21E205550039A777 /* ForecastData.swift */,
+				F3C4D89F21FACC8600CA1E34 /* WhatsNewKit.swift */,
 			);
 			path = "Shared Data";
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				F33A87F721E202F50039A777 /* WeatherVController.swift */,
+				F3C4D89D21FAB4BC00CA1E34 /* SettingsVController.swift */,
 			);
 			path = VControllers;
 			sourceTree = "<group>";
@@ -547,6 +553,8 @@
 				F33A880A21E204DE0039A777 /* ForecastManager.swift in Sources */,
 				F3B1E9B021E5D38F0024DFD0 /* HourlyCVCell.swift in Sources */,
 				F33A87FC21E202FE0039A777 /* LocationsTVController.swift in Sources */,
+				F3C4D8A021FACC8600CA1E34 /* WhatsNewKit.swift in Sources */,
+				F3C4D89E21FAB4BC00CA1E34 /* SettingsVController.swift in Sources */,
 				F33A880721E203100039A777 /* ButtonManager.swift in Sources */,
 				F33A87FA21E202F90039A777 /* LocationsTVCell.swift in Sources */,
 				F33A87EF21E202A90039A777 /* DarkTheme.swift in Sources */,

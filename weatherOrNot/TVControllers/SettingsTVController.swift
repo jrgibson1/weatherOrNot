@@ -14,6 +14,8 @@ class SettingsTVController: UITableViewController {
         super.viewDidLoad()
         
         applyTheme()
+        
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     func applyTheme() {
@@ -29,6 +31,11 @@ class SettingsTVController: UITableViewController {
         ]
         navigationBar?.titleTextAttributes = miniTheme
         navigationBar?.largeTitleTextAttributes = miniTheme
+        
+        let barColor = Theme.current.backgroundColour
+        let pressedTintColor = Theme.current.tintColour
+        UITabBar.appearance().barTintColor = barColor
+        UITabBar.appearance().tintColor = pressedTintColor
     }
 
     // MARK: - Table view data source

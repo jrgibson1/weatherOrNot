@@ -9,6 +9,10 @@
 import UIKit
 
 class DarkTheme: ThemeProtocol {
+    var statusBar: UIStatusBarStyle = UIStatusBarStyle.lightContent
+    
+    var signatureImage: UIImage = UIImage(named: "JG-white")!
+    
     var barStyle: UIBarStyle = .black
     var preferredStatusBarStyle: UIStatusBarStyle = .lightContent
     

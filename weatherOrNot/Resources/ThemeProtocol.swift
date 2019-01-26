@@ -17,4 +17,7 @@ protocol ThemeProtocol {
     var tableRowSelectionColor: UIColor { get }
     
     var barStyle: UIBarStyle { get set }
+    var statusBar: UIStatusBarStyle { get }
+    
+    var signatureImage: UIImage { get }
 }

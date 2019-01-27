@@ -12,7 +12,6 @@ import SVProgressHUD
 
 class WeatherVController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var lightToDarkSwitcher: UISwitch!
     @IBOutlet weak var currentTempLabel: UILabel!
     @IBOutlet weak var variableTempLabel: UILabel!
     @IBOutlet weak var currentSummary: UITextView!
@@ -46,11 +45,11 @@ class WeatherVController: UIViewController {
     @IBOutlet weak var thisHourLabel: UILabel!
     @IBOutlet weak var hourSummary: UITextView!
     @IBOutlet weak var hourlyWeatherCollection: UICollectionView!
-    @IBOutlet weak var tapMoreHoursLabel: UILabel!
+    @IBOutlet weak var tapMoreHoursButton: UIButton!
     @IBOutlet weak var next24HoursLabel: UILabel!
     @IBOutlet weak var daySummaryText: UITextView!
     @IBOutlet weak var dailyWeatherCollection: UICollectionView!
-    @IBOutlet weak var tapMoreDaysLabel: UILabel!
+    @IBOutlet weak var tapMoreDaysButton: UIButton!
     
     var selectedLocation: Location?
     var ImportedLocation = [Location]()
@@ -65,10 +64,6 @@ class WeatherVController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ProgressHUD()
-        
-        if let themeSwicher = defaults.value(forKey: "LightTheme") {
-            lightToDarkSwitcher.isOn = themeSwicher as! Bool
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,6 +71,12 @@ class WeatherVController: UIViewController {
         guard selectedLocation != nil else {return Alert.noLocationSelected(on: self)}
 
         loadLocation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        applyTheme()
     }
     
     func ProgressHUD() {
@@ -214,10 +215,10 @@ class WeatherVController: UIViewController {
         self.sunSetNumber.textColor = Theme.current.textColour
         self.thisHourLabel.textColor = Theme.current.textColour
         self.hourSummary.textColor = Theme.current.textColour
-        self.tapMoreHoursLabel.textColor = Theme.current.textColour
+        self.tapMoreHoursButton.setTitleColor(Theme.current.textColour, for: .normal) 
         self.next24HoursLabel.textColor = Theme.current.textColour
         self.daySummaryText.textColor = Theme.current.textColour
-        self.tapMoreDaysLabel.textColor = Theme.current.textColour
+        self.tapMoreDaysButton.setTitleColor(Theme.current.textColour, for: .normal) 
         self.windHeading.textColor = Theme.current.textColour
 //        self.CellTimeLabel.textColor = Theme.current.textColour
 //        self.CellWeatherImage.tintColor = Theme.current.imageColour
@@ -259,15 +260,8 @@ class WeatherVController: UIViewController {
         self.precipChanceImage.layer.cornerRadius = self.precipChanceImage.frame.height / 2
         self.thisHourLabel.text = "NEXT 24 HOURS"
         self.next24HoursLabel.text = "NEXT 7 DAYS"
-        self.tapMoreHoursLabel.text = "TAP ABOVE FOR MORE INFORMATION"
-        self.tapMoreDaysLabel.text = "TAP ABOVE FOR MORE DETAILS"
-    }
-    
-    @IBAction func switchTapped(_ sender: UISwitch) {
-        Theme.current = sender.isOn ? LightTheme() : DarkTheme()
-        
-        defaults.set(sender.isOn, forKey: "LightTheme")
-        applyTheme()
+        self.tapMoreHoursButton.setTitle("TAP HERE FOR MORE DETAILS", for: .normal)
+        self.tapMoreDaysButton.setTitle("TAP HERE FOR MORE DETAILS", for: .normal)
     }
     
     @IBAction func gestureTapped(_ sender: UITapGestureRecognizer) {
@@ -305,4 +299,14 @@ extension WeatherVController: UICollectionViewDataSource, UICollectionViewDelega
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "WeatherToMoreHours" {
+                let destinationVC = segue.destination as! MoreHoursTVController
+                destinationVC.selectedLocation = selectedLocation
+    } else if segue.identifier == "WeatherToMoreDays" {
+                let destinationVC = segue.destination as! MoreDaysTVController
+                destinationVC.selectedLocation = selectedLocation
+            }
+        }
 }

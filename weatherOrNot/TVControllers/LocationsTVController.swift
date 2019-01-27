@@ -22,6 +22,8 @@ class LocationsTVContoller: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        applyTheme()
     }
     
     override func viewWillAppear(_ animated: Bool) {

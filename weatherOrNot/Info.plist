@@ -17,13 +17,13 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>180127.24</string>
+	<string>190128.05</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>&quot;Required to call support for ewatherOrNot&quot;</string>
+	<string>"Required to call support for ewatherOrNot"</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>&quot;Required to access screenshots.&quot;</string>
+	<string>"Required to access screenshots."</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

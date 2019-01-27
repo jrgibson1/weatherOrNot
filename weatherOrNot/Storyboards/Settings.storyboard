@@ -32,12 +32,21 @@
                                     <action selector="switchTapped:" destination="soH-Y1-aVa" eventType="valueChanged" id="sqd-yL-iXs"/>
                                 </connections>
                             </switch>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bk2-i9-FNi">
-                                <rect key="frame" x="57" y="333" width="300" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bk2-i9-FNi">
+                                <rect key="frame" x="57" y="533" width="300" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="plF-G8-QcP"/>
+                                    <constraint firstAttribute="height" constant="90" id="rEr-He-3rg"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bk2-i9-FNi" firstAttribute="leading" secondItem="Kih-Au-oIw" secondAttribute="leading" constant="57" id="RAT-Kw-gk9"/>
+                            <constraint firstItem="Kih-Au-oIw" firstAttribute="trailing" secondItem="bk2-i9-FNi" secondAttribute="trailing" constant="57" id="cle-zF-DmZ"/>
+                            <constraint firstItem="Kih-Au-oIw" firstAttribute="bottom" secondItem="bk2-i9-FNi" secondAttribute="bottom" constant="50" id="kod-6u-aSe"/>
+                            <constraint firstItem="bk2-i9-FNi" firstAttribute="centerX" secondItem="sw4-Tl-oEV" secondAttribute="centerX" id="zSE-Um-2We"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kih-Au-oIw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="tMo-ro-Bhg"/>

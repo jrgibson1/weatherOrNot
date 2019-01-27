@@ -11,6 +11,8 @@
 		2F35FB82AEAFA843A2DAF2EC /* Pods_weatherOrNotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DD0BCE167CD19E953364A0 /* Pods_weatherOrNotUITests.framework */; };
 		F26B54920212E875753E4220 /* Pods_weatherOrNot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2BE1AAD4695557456343EF /* Pods_weatherOrNot.framework */; };
 		F300324321F0F5B7005E65A7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F300324221F0F5B7005E65A7 /* Settings.storyboard */; };
+		F313199E21FE2C8F00B520A0 /* MoreHoursTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313199D21FE2C8F00B520A0 /* MoreHoursTVController.swift */; };
+		F31319A021FE2C9E00B520A0 /* MoreDaysTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313199F21FE2C9E00B520A0 /* MoreDaysTVController.swift */; };
 		F33A87B321E2000D0039A777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A87B221E2000D0039A777 /* AppDelegate.swift */; };
 		F33A87C821E2000E0039A777 /* weatherOrNotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A87C721E2000E0039A777 /* weatherOrNotTests.swift */; };
 		F33A87D321E2000E0039A777 /* weatherOrNotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A87D221E2000E0039A777 /* weatherOrNotUITests.swift */; };
@@ -68,6 +70,8 @@
 		C26BC3FE8D41EB28633E02FF /* Pods-weatherOrNotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherOrNotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weatherOrNotTests/Pods-weatherOrNotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC96F60787134D9EDA557EBD /* Pods-weatherOrNotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherOrNotUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weatherOrNotUITests/Pods-weatherOrNotUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F300324221F0F5B7005E65A7 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		F313199D21FE2C8F00B520A0 /* MoreHoursTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreHoursTVController.swift; sourceTree = "<group>"; };
+		F313199F21FE2C9E00B520A0 /* MoreDaysTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDaysTVController.swift; sourceTree = "<group>"; };
 		F33A87AF21E2000D0039A777 /* weatherOrNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherOrNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33A87B221E2000D0039A777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F33A87BE21E2000E0039A777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -267,6 +271,8 @@
 			children = (
 				F33A87FB21E202FE0039A777 /* LocationsTVController.swift */,
 				F3A68C9221F1D06B0092C918 /* SettingsTVController.swift */,
+				F313199D21FE2C8F00B520A0 /* MoreHoursTVController.swift */,
+				F313199F21FE2C9E00B520A0 /* MoreDaysTVController.swift */,
 			);
 			path = TVControllers;
 			sourceTree = "<group>";
@@ -548,11 +554,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F313199E21FE2C8F00B520A0 /* MoreHoursTVController.swift in Sources */,
 				F33A880221E203090039A777 /* LocationData.swift in Sources */,
 				F33A880821E203100039A777 /* FavouriteManager.swift in Sources */,
 				F33A880A21E204DE0039A777 /* ForecastManager.swift in Sources */,
 				F3B1E9B021E5D38F0024DFD0 /* HourlyCVCell.swift in Sources */,
 				F33A87FC21E202FE0039A777 /* LocationsTVController.swift in Sources */,
+				F31319A021FE2C9E00B520A0 /* MoreDaysTVController.swift in Sources */,
 				F3C4D8A021FACC8600CA1E34 /* WhatsNewKit.swift in Sources */,
 				F3C4D89E21FAB4BC00CA1E34 /* SettingsVController.swift in Sources */,
 				F33A880721E203100039A777 /* ButtonManager.swift in Sources */,

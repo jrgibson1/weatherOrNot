@@ -77,6 +77,10 @@ struct HourlyWeatherData: Codable {
     var precipProbability: Double?
     var precipType: String?
     var temperature: Double?
+    var apparentTemperature: Double?
+    var summary: String?
+    var cloudCover: Double?
+    var windSpeed: Double?
 }
 
 struct Daily: Codable {

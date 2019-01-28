@@ -11,6 +11,10 @@ import Instabug
 import WhatsNewKit
 
 class LocationsTVContoller: UITableViewController {
+    let kVersion        = "CFBundleShortVersionString"
+    let kBuildNumber    = "CFBundleVersion"
+    
+    @IBOutlet weak var versionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,9 @@ class LocationsTVContoller: UITableViewController {
         let pressedTintColor = Theme.current.tintColour
         UITabBar.appearance().barTintColor = barColor
         UITabBar.appearance().tintColor = pressedTintColor
+        
+        self.versionLabel.text = getVersion()
+        self.versionLabel.textColor = Theme.current.textColour
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -107,6 +114,14 @@ class LocationsTVContoller: UITableViewController {
     
     @IBAction func addButtonPressed(_ sender: Any) {
         Alert.codingError(on: self)
+    }
+    
+    func getVersion() -> String {
+        let dictionary  = Bundle.main.infoDictionary!
+        let version     = dictionary[kVersion] as! String
+        let build       = dictionary[kBuildNumber] as! String
+        
+        return "\(version) (\(build))"
     }
     
 }

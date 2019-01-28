@@ -281,11 +281,11 @@ class WeatherVController: UIViewController {
 
 extension WeatherVController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return hourlyWeather.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return hourlyWeather.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -297,15 +297,23 @@ extension WeatherVController: UICollectionViewDataSource, UICollectionViewDelega
         cell.precipLabel.text = "\((weatherForecast.precipProbability!)*100)%"
         cell.TimeLabel.text = DateFormatter.localizedString(from: time as Date, dateStyle: .none, timeStyle: .short)
         
+        
+                cell.TempLabel.textColor = Theme.current.textColour
+                cell.WeatherIcon.tintColor = Theme.current.imageColour
+                cell.precipLabel.textColor = Theme.current.textColour
+                cell.TimeLabel.textColor = Theme.current.textColour
+        
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WeatherToMoreHours" {
                 let destinationVC = segue.destination as! MoreHoursTVController
+            navigationItem.title = "Back"
                 destinationVC.selectedLocation = selectedLocation
     } else if segue.identifier == "WeatherToMoreDays" {
                 let destinationVC = segue.destination as! MoreDaysTVController
+            navigationItem.title = "Back"
                 destinationVC.selectedLocation = selectedLocation
             }
         }

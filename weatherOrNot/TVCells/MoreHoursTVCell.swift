@@ -9,19 +9,23 @@
 import UIKit
 
 class MoreHoursTVCell: UITableViewCell {
+    @IBOutlet weak var TimeLabel: UILabel!
     @IBOutlet weak var ForecastImage: UIImageView!
     @IBOutlet weak var CurrentTempLabel: UILabel!
     @IBOutlet weak var FeelsLikeLabel: UILabel!
     @IBOutlet weak var SummaryText: UITextView!
     @IBOutlet weak var CloudImage: UIImageView!
-    @IBOutlet weak var CloudHeading: UILabel!
     @IBOutlet weak var CloudNumber: UILabel!
     @IBOutlet weak var WindImage: UIImageView!
-    @IBOutlet weak var WindHeading: UILabel!
     @IBOutlet weak var WindNumber: UILabel!
     @IBOutlet weak var PrecipImage: UIImageView!
-    @IBOutlet weak var PrecipHeading: UILabel!
     @IBOutlet weak var PrecipNumber: UILabel!
+    @IBOutlet weak var FourImage: UIImageView!
+    @IBOutlet weak var FourNumber: UILabel!
+    @IBOutlet weak var FiveImage: UIImageView!
+    @IBOutlet weak var FiveNumber: UILabel!
+    @IBOutlet weak var SixImage: UIImageView!
+    @IBOutlet weak var SixNumber: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

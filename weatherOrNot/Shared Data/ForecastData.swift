@@ -81,6 +81,10 @@ struct HourlyWeatherData: Codable {
     var summary: String?
     var cloudCover: Double?
     var windSpeed: Double?
+    var windBearing: Double?
+    var humidity: Double?
+    var uvIndex: Double?
+    var visibility: Double?
 }
 
 struct Daily: Codable {
@@ -103,6 +107,10 @@ struct DailyWeatherData: Codable {
     var uvIndex: Int?
     var windBearing: Int?
     var windSpeed: Double?
+    var humidity: Double?
+    var apparentTemperatureMin: Double?
+    var apparentTemperatureMax: Double?
+    
 
     init(from decoder: Decoder) throws {
         let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
@@ -120,23 +128,4 @@ struct DailyWeatherData: Codable {
         self.windBearing = try? valueContainer.decode(Int.self, forKey: CodingKeys.windBearing)
         self.windSpeed = try? valueContainer.decode(Double.self, forKey: CodingKeys.windSpeed)
     }
-}
-
-
-extension Currently {
-    static let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .full
-        formatter.timeStyle = .none
-        return formatter
-    }()
-}
-
-extension DailyWeatherData {
-    static let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .none
-        formatter.timeStyle = .short
-        return formatter
-    }()
 }

@@ -109,7 +109,7 @@ class WeatherVController: UIViewController {
                     let currentForecast = forecast.currently
                     let now = NSDate(timeIntervalSince1970: TimeInterval(currentForecast!.time!))
                     DispatchQueue.main.async(execute: {
-                        self.dateLabel.text = Currently.dateFormatter.string(from: now as Date)
+                        self.dateLabel.text = DateFormatter.localizedString(from: now as Date, dateStyle: .full, timeStyle: .none)
                         self.currentForecastImage.image = UIImage(named: currentForecast!.icon!)
                         self.currentTempLabel.text = "\(Double(currentForecast!.temperature!).rounded())°"
                         self.currentSummary.text = "\(currentForecast!.summary!)"
@@ -153,8 +153,8 @@ class WeatherVController: UIViewController {
                         self.precipChanceHeading.text = "Chance of \n\((dailyForecast.data![0].precipType)?.capitalized ?? "rain")"
                         self.precipChanceImage.image = UIImage(named: "\(dailyForecast.data![0].precipType ?? "rain")")
                         self.precipChanceNumber.text = "\(Double((dailyForecast.data![0].precipProbability!)*100).rounded())%"
-                        self.sunSetNumber.text = DailyWeatherData.dateFormatter.string(from: sunset as Date)
-                        self.sunRiseNumber.text = DailyWeatherData.dateFormatter.string(from: sunrise as Date)
+                        self.sunSetNumber.text = DateFormatter.localizedString(from: sunset as Date, dateStyle: .none, timeStyle: .short)
+                        self.sunRiseNumber.text = DateFormatter.localizedString(from: sunrise as Date, dateStyle: .none, timeStyle: .short)
                         self.daySummaryText.text = "\(dailyForecast.summary!)"
                         self.windNumber.text = "\(String(describing: (dailyForecast.data![0].windSpeed!).rounded()))"
                     })
@@ -220,10 +220,6 @@ class WeatherVController: UIViewController {
         self.daySummaryText.textColor = Theme.current.textColour
         self.tapMoreDaysButton.setTitleColor(Theme.current.textColour, for: .normal) 
         self.windHeading.textColor = Theme.current.textColour
-//        self.CellTimeLabel.textColor = Theme.current.textColour
-//        self.CellWeatherImage.tintColor = Theme.current.imageColour
-//        self.CellTempLabel.textColor = Theme.current.textColour
-//        self.CellPrecipLabel.textColor = Theme.current.textColour
         
         self.feelsLikeImage.backgroundColor = Theme.current.imageBackgroundColour
         self.humidityImage.backgroundColor = Theme.current.imageBackgroundColour
@@ -292,10 +288,14 @@ extension WeatherVController: UICollectionViewDataSource, UICollectionViewDelega
         let weatherForecast = hourlyWeather[indexPath.section]
         let time = NSDate(timeIntervalSince1970: TimeInterval(weatherForecast.time!))
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HourlyCVCell", for: indexPath) as! HourlyCVCell
+        cell.TimeLabel.text = DateFormatter.localizedString(from: time as Date, dateStyle: .none, timeStyle: .short)
         cell.WeatherIcon.image = UIImage(named: weatherForecast.icon!)
         cell.TempLabel.text = "\((weatherForecast.temperature!).rounded())°"
-        cell.precipLabel.text = "\((weatherForecast.precipProbability!)*100)%"
-        cell.TimeLabel.text = DateFormatter.localizedString(from: time as Date, dateStyle: .none, timeStyle: .short)
+        let precipProbability = ((weatherForecast.precipProbability!)*100)
+        let roundedPrecip = precipProbability.roundToPlaces(places: 1)
+        cell.precipLabel.text = "\(roundedPrecip)%"
+        
+        
         
         
                 cell.TempLabel.textColor = Theme.current.textColour
@@ -317,4 +317,13 @@ extension WeatherVController: UICollectionViewDataSource, UICollectionViewDelega
                 destinationVC.selectedLocation = selectedLocation
             }
         }
+}
+
+extension Double {
+    
+    func roundToPlaces(places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+    
 }

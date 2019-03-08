@@ -106,18 +106,26 @@ class WeatherVController: UIViewController {
         if let location = selectedLocation {
             ForecastManager.shared.fetchForecast(for: location, completion: { (forecast) in
                 if let forecast = forecast {
-                    let currentForecast = forecast.currently
-                    let now = NSDate(timeIntervalSince1970: TimeInterval(currentForecast!.time!))
+                    let currentForecast = forecast
+                    let offsetSecs = forecast.offset!*60*60
+                    let now = NSDate(timeIntervalSince1970: TimeInterval(currentForecast.currently!.time!))
+                    
+                    let currentOffset = TimeZone.current.secondsFromGMT()*(1)
+                    let relative = currentOffset.advanced(by: offsetSecs)
+                    
+                    let timeAtLocation = now.addingTimeInterval(TimeInterval(exactly: relative)!)
                     DispatchQueue.main.async(execute: {
-                        self.dateLabel.text = DateFormatter.localizedString(from: now as Date, dateStyle: .full, timeStyle: .none)
-                        self.currentForecastImage.image = UIImage(named: currentForecast!.icon!)
-                        self.currentTempLabel.text = "\(Double(currentForecast!.temperature!).rounded())°"
-                        self.currentSummary.text = "\(currentForecast!.summary!)"
-                        self.feelsLikeNumber.text = "\((currentForecast!.apparentTemperature!).rounded())°"
-                        self.humidityNumber.text = "\(Double((currentForecast!.humidity!)*100).rounded())%"
-                        self.uvIndexNumber.text = "\(Double(currentForecast!.uvIndex!).rounded())"
+                        self.dateLabel.text = "\(timeAtLocation as Date)"
+                            
+//                            DateFormatter.localizedString(from: now as Date, dateStyle: .full, timeStyle: .none)
+                        self.currentForecastImage.image = UIImage(named: currentForecast.currently!.icon!)
+                        self.currentTempLabel.text = "\(Double(currentForecast.currently!.temperature!).rounded())°"
+                        self.currentSummary.text = "\(currentForecast.currently!.summary!)"
+                        self.feelsLikeNumber.text = "\((currentForecast.currently!.apparentTemperature!).rounded())°"
+                        self.humidityNumber.text = "\(Double((currentForecast.currently!.humidity!)*100).rounded())%"
+                        self.uvIndexNumber.text = "\(Double(currentForecast.currently!.uvIndex!).rounded())"
                         self.windImage.image = UIImage(named: "wind-deg")
-                        self.windImage.transform = CGAffineTransform(rotationAngle: CGFloat((currentForecast?.windBearing!)!))
+                        self.windImage.transform = CGAffineTransform(rotationAngle: CGFloat((currentForecast.currently?.windBearing!)!))
                     })
                 }
             })
@@ -326,4 +334,13 @@ extension Double {
         return (self * divisor).rounded() / divisor
     }
     
+}
+
+extension Date {
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        formatter.timeStyle = .short
+        return formatter
+    }()
 }

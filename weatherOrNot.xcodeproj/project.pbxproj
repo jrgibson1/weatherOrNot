@@ -37,7 +37,9 @@
 		F33A880D21E205280039A777 /* URL_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A880C21E205280039A777 /* URL_Add.swift */; };
 		F33A880F21E205550039A777 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A880E21E205550039A777 /* ForecastData.swift */; };
 		F37D3DAE21FEE1910081E201 /* MoreDaysTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37D3DAD21FEE1910081E201 /* MoreDaysTVCell.swift */; };
-		F3A3F2C021F0F12400B44FBF /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F2BF21F0F12400B44FBF /* Start.storyboard */; };
+		F388C2392232DBB100E44EF9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F388C2382232DBB100E44EF9 /* LocationModel.swift */; };
+		F388C23B2232DBBE00E44EF9 /* LocationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F388C23A2232DBBE00E44EF9 /* LocationFunction.swift */; };
+		F3A3F2C021F0F12400B44FBF /* FirstScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F2BF21F0F12400B44FBF /* FirstScreen.storyboard */; };
 		F3A68C9321F1D06B0092C918 /* SettingsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A68C9221F1D06B0092C918 /* SettingsTVController.swift */; };
 		F3AEB78121F8BD88008F8A67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AEB78021F8BD88008F8A67 /* Assets.xcassets */; };
 		F3B1E9B021E5D38F0024DFD0 /* HourlyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */; };
@@ -47,6 +49,7 @@
 		F3D561F322177AE400DB696A /* Days.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D561F222177AE400DB696A /* Days.storyboard */; };
 		F3D561FA221787EE00DB696A /* AddLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D561F9221787ED00DB696A /* AddLocation.storyboard */; };
 		F3D561FC221788FC00DB696A /* AddLocationVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D561FB221788FC00DB696A /* AddLocationVController.swift */; };
+		F3D561FF22187A1200DB696A /* CDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3D561FD22187A1200DB696A /* CDModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +111,9 @@
 		F33A880C21E205280039A777 /* URL_Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Add.swift; sourceTree = "<group>"; };
 		F33A880E21E205550039A777 /* ForecastData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
 		F37D3DAD21FEE1910081E201 /* MoreDaysTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDaysTVCell.swift; sourceTree = "<group>"; };
-		F3A3F2BF21F0F12400B44FBF /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		F388C2382232DBB100E44EF9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		F388C23A2232DBBE00E44EF9 /* LocationFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFunction.swift; sourceTree = "<group>"; };
+		F3A3F2BF21F0F12400B44FBF /* FirstScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstScreen.storyboard; sourceTree = "<group>"; };
 		F3A68C9221F1D06B0092C918 /* SettingsTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVController.swift; sourceTree = "<group>"; };
 		F3AEB78021F8BD88008F8A67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B1E9AF21E5D38F0024DFD0 /* HourlyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCVCell.swift; sourceTree = "<group>"; };
@@ -118,6 +123,7 @@
 		F3D561F222177AE400DB696A /* Days.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Days.storyboard; sourceTree = "<group>"; };
 		F3D561F9221787ED00DB696A /* AddLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddLocation.storyboard; sourceTree = "<group>"; };
 		F3D561FB221788FC00DB696A /* AddLocationVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationVController.swift; sourceTree = "<group>"; };
+		F3D561FE22187A1200DB696A /* CDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDModel.xcdatamodel; sourceTree = "<group>"; };
 		FD2BE1AAD4695557456343EF /* Pods_weatherOrNot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherOrNot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,6 +178,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F334446D22324CEA0037EFC0 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				F33A880121E203090039A777 /* LocationData.swift */,
+				F388C2382232DBB100E44EF9 /* LocationModel.swift */,
+				F388C23A2232DBBE00E44EF9 /* LocationFunction.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		F334446E22324CF30037EFC0 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				F33A880E21E205550039A777 /* ForecastData.swift */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
 		F33A87A621E2000D0039A777 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +234,7 @@
 				F33A87B221E2000D0039A777 /* AppDelegate.swift */,
 				F33A87BE21E2000E0039A777 /* Info.plist */,
 				F3AEB78021F8BD88008F8A67 /* Assets.xcassets */,
+				F3D561FD22187A1200DB696A /* CDModel.xcdatamodeld */,
 			);
 			path = weatherOrNot;
 			sourceTree = "<group>";
@@ -260,8 +285,8 @@
 		F33A87F221E202C70039A777 /* Shared Data */ = {
 			isa = PBXGroup;
 			children = (
-				F33A880121E203090039A777 /* LocationData.swift */,
-				F33A880E21E205550039A777 /* ForecastData.swift */,
+				F334446D22324CEA0037EFC0 /* Location */,
+				F334446E22324CF30037EFC0 /* Forecast */,
 				F3C4D89F21FACC8600CA1E34 /* WhatsNewKit.swift */,
 			);
 			path = "Shared Data";
@@ -271,12 +296,12 @@
 			isa = PBXGroup;
 			children = (
 				F33A87FD21E203050039A777 /* LaunchScreen.storyboard */,
-				F3A3F2BF21F0F12400B44FBF /* Start.storyboard */,
-				F300324221F0F5B7005E65A7 /* Settings.storyboard */,
+				F3A3F2BF21F0F12400B44FBF /* FirstScreen.storyboard */,
 				F33A87FE21E203050039A777 /* Weather.storyboard */,
 				F3D561F9221787ED00DB696A /* AddLocation.storyboard */,
 				F3D561F222177AE400DB696A /* Days.storyboard */,
 				F3D561F022177A6B00DB696A /* Hours.storyboard */,
+				F300324221F0F5B7005E65A7 /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -450,7 +475,7 @@
 				F33A87F021E202A90039A777 /* uvIndexColours.xcassets in Resources */,
 				F300324321F0F5B7005E65A7 /* Settings.storyboard in Resources */,
 				F33A87EA21E202A90039A777 /* themeColours.xcassets in Resources */,
-				F3A3F2C021F0F12400B44FBF /* Start.storyboard in Resources */,
+				F3A3F2C021F0F12400B44FBF /* FirstScreen.storyboard in Resources */,
 				F3D561F122177A6B00DB696A /* Hours.storyboard in Resources */,
 				F33A87FF21E203050039A777 /* LaunchScreen.storyboard in Resources */,
 				F3AEB78121F8BD88008F8A67 /* Assets.xcassets in Resources */,
@@ -579,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F313199E21FE2C8F00B520A0 /* MoreHoursTVController.swift in Sources */,
+				F388C23B2232DBBE00E44EF9 /* LocationFunction.swift in Sources */,
 				F33A880221E203090039A777 /* LocationData.swift in Sources */,
 				F33A880821E203100039A777 /* FavouriteManager.swift in Sources */,
 				F33A880A21E204DE0039A777 /* ForecastManager.swift in Sources */,
@@ -588,6 +614,7 @@
 				F31319A021FE2C9E00B520A0 /* MoreDaysTVController.swift in Sources */,
 				F3C4D8A021FACC8600CA1E34 /* WhatsNewKit.swift in Sources */,
 				F3C4D89E21FAB4BC00CA1E34 /* SettingsVController.swift in Sources */,
+				F388C2392232DBB100E44EF9 /* LocationModel.swift in Sources */,
 				F33A880721E203100039A777 /* ButtonManager.swift in Sources */,
 				F3D561FC221788FC00DB696A /* AddLocationVController.swift in Sources */,
 				F33A87FA21E202F90039A777 /* LocationsTVCell.swift in Sources */,
@@ -600,6 +627,7 @@
 				F33A87B321E2000D0039A777 /* AppDelegate.swift in Sources */,
 				F3A68C9321F1D06B0092C918 /* SettingsTVController.swift in Sources */,
 				F33A880F21E205550039A777 /* ForecastData.swift in Sources */,
+				F3D561FF22187A1200DB696A /* CDModel.xcdatamodeld in Sources */,
 				F328052021FEDE0D00ED0359 /* MoreHoursTVCell.swift in Sources */,
 				F33A87EE21E202A90039A777 /* ThemeProtocol.swift in Sources */,
 			);
@@ -919,6 +947,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F3D561FD22187A1200DB696A /* CDModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F3D561FE22187A1200DB696A /* CDModel.xcdatamodel */,
+			);
+			currentVersion = F3D561FE22187A1200DB696A /* CDModel.xcdatamodel */;
+			path = CDModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F33A87A721E2000D0039A777 /* Project object */;
 }

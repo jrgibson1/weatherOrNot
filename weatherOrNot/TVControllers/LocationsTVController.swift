@@ -122,10 +122,11 @@ class LocationsTVContoller: UITableViewController {
         let location = locations[indexPath.row]
         
         cell.backgroundColor = Theme.current.backgroundColour
-        cell.flagLabel?.text = location.flag
-        cell.flagLabel.textColor = Theme.current.textColour
-        cell.locationLabel.text = "\(location.locationName), \(location.countryName)"
-        cell.locationLabel.textColor = Theme.current.textColour
+        cell.LocationLabel.text = "\(location.locationName)"
+        cell.LocationLabel.textColor = Theme.current.textColour
+        
+        cell.CountryLabel.text = "\(location.countryName)"
+        cell.CountryLabel.textColor = Theme.current.textColour
         
         let backgroundView = UIView()
         backgroundView.backgroundColor = Theme.current.tableRowSelectionColor
@@ -139,7 +140,7 @@ class LocationsTVContoller: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 80
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -176,7 +177,7 @@ class LocationsTVContoller: UITableViewController {
         let version     = dictionary[kVersion] as! String
         let build       = dictionary[kBuildNumber] as! String
         
-        return "\(version) (\(build))"
+        return "\(version) (\(build))   "
     }
     
 //    @IBAction func addButtonPressed(_ sender: Any) {

@@ -12,10 +12,18 @@ class MoreHoursTVController: UITableViewController {
     
     var selectedLocation: Location?
     var ImportedLocation = [Location]()
+    var MoreHoursForecast = [HourlyWeatherData](){
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         
+        loadWeather()
         applyTheme()
         loadLocation()
     }
@@ -25,77 +33,86 @@ class MoreHoursTVController: UITableViewController {
         
         applyTheme()
     }
+    
+    func loadWeather() {
+        if let location = selectedLocation {
+            ForecastManager.shared.fetchForecast(for: location, completion: { (forecast) in
+                if let forecast = forecast {
+                    self.MoreHoursForecast = (forecast.hourly?.data)!                 }
+            })
+        }
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return MoreHoursForecast.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 283
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as! MoreHoursTVCell
+        let weatherObject = MoreHoursForecast[indexPath.row]
+        let now = NSDate(timeIntervalSince1970: TimeInterval(weatherObject.time!))
+        
+        self.navigationItem.title = "Next \(MoreHoursForecast.count) Hours"
 
-        // Configure the cell...
-
+        cell.TimeLabel.text = DateFormatter.localizedString(from: now as Date, dateStyle: .short, timeStyle: .short)
+        cell.ForecastImage.image = UIImage(named: weatherObject.icon!)
+        cell.CurrentTempLabel.text = "\(Double(weatherObject.temperature!).rounded())°"
+        cell.FeelsLikeLabel.text = "Feels Like \(Double(weatherObject.apparentTemperature!).rounded())°"
+        cell.SummaryText.text = weatherObject.summary
+        cell.CloudNumber.text = "\(Double((weatherObject.cloudCover!)*100).rounded())%"
+        cell.WindNumber.text = "\(String(describing: (weatherObject.windSpeed!).rounded()))"
+        cell.PrecipNumber.text = "\(Double((weatherObject.precipIntensity!)*100).rounded())%"
+        
+        cell.CloudImage.image = UIImage(named: "cloud")
+        cell.PrecipImage.image = UIImage(named: "\(weatherObject.precipType ?? "rain")")
+        cell.WindImage.image = UIImage(named: "wind-deg")
+        cell.WindImage.transform = CGAffineTransform(rotationAngle: CGFloat((weatherObject.windBearing)!))
+        
+        cell.FourImage.image = UIImage(named: "humidity")
+        cell.FiveImage.image = UIImage(named: "uv")
+        cell.SixImage.image = UIImage(named: "visability")
+        
+        cell.FourNumber.text = "\(Double((weatherObject.humidity!)*100).rounded())%"
+        cell.FiveNumber.text = "\(String(Int(weatherObject.uvIndex!)))"
+        cell.SixNumber.text = "\((weatherObject.visibility!).rounded())"
+        
+        
+        cell.ForecastImage.tintColor = Theme.current.imageColour
+        cell.CloudImage.tintColor = Theme.current.imageColour
+        cell.WindImage.tintColor = Theme.current.imageColour
+        cell.PrecipImage.tintColor = Theme.current.imageColour
+        cell.FourImage.tintColor = Theme.current.imageColour
+        cell.FiveImage.tintColor = Theme.current.imageColour
+        cell.SixImage.tintColor = Theme.current.imageColour
+        cell.CurrentTempLabel.textColor = Theme.current.textColour
+        cell.FeelsLikeLabel.textColor = Theme.current.textColour
+        cell.TimeLabel.textColor = Theme.current.textColour
+        cell.SummaryText.textColor = Theme.current.textColour
+        cell.CloudNumber.textColor = Theme.current.textColour
+        cell.WindNumber.textColor = Theme.current.textColour
+        cell.PrecipNumber.textColor = Theme.current.textColour
+        cell.FourNumber.textColor = Theme.current.textColour
+        cell.FiveNumber.textColor = Theme.current.textColour
+        cell.SixNumber.textColor = Theme.current.textColour
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func loadLocation() {
         if let selectedLocation = selectedLocation {
-            self.navigationItem.title = "\(selectedLocation.locationName): Next XX Hours"
+            self.navigationItem.prompt = "\(selectedLocation.locationName)"
         }
     }
     

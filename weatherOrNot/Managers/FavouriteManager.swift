@@ -25,8 +25,6 @@ class FavouriteManager {
             let locationDictionary: [String: Any?] = [
                 "locationName": location.locationName,
                 "countryName": location.countryName,
-                "countryAbbreviation": location.countryAbbreviation,
-                "flag": location.flag,
                 "longitude": location.longitude,
                 "latitude": location.latitude]
             defaults.set(locationDictionary, forKey: "location")
@@ -41,11 +39,9 @@ class FavouriteManager {
         if let locationDictionary = defaults.value(forKey: "location") as? [String: Any?] {
             if let locationName = locationDictionary["locationName"] as? String,
                 let countryName = locationDictionary["countryName"] as? String,
-                let countryAbbreviation = locationDictionary["countryAbbreviation"] as? String,
-                let flag = locationDictionary["flag"] as? String,
                 let longitude = locationDictionary["longitude"] as? Double,
                 let latitude = locationDictionary["latitude"] as? Double {
-                return Location(locationName: locationName, countryName: countryName, countryAbbreviation: countryAbbreviation, flag: flag, longitude: longitude, latitude: latitude)
+                return Location(locationName: locationName, countryName: countryName, longitude: longitude, latitude: latitude)
             }
         }
         return nil

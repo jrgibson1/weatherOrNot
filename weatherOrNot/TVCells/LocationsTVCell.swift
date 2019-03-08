@@ -9,6 +9,6 @@
 import UIKit
 
 class LocationsTVCell: UITableViewCell {
-    @IBOutlet weak var flagLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var LocationLabel: UILabel!
+    @IBOutlet weak var CountryLabel: UILabel!
 }

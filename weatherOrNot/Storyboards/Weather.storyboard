@@ -21,12 +21,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Y5-87-0br">
-                            <rect key="frame" x="0.0" y="108" width="414" height="43"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Y5-87-0br">
+                            <rect key="frame" x="0.0" y="769" width="414" height="43"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
+                            <size key="shadowOffset" width="0.0" height="0.0"/>
                         </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="80" id="QYo-JJ-Lvu" customClass="LocationsTVCell" customModule="weatherOrNot" customModuleProvider="target">
@@ -78,7 +79,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Add" id="qii-SB-9NN">
                             <connections>
                                 <action selector="addButtonPressed:" destination="akQ-xg-5ZD" id="YfJ-jE-LUy"/>
-                                <segue destination="TNc-pa-TBI" kind="show" id="S7A-ow-ljo"/>
+                                <segue destination="eLK-B6-F19" kind="presentation" id="09C-Tr-Etm"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -1294,21 +1295,13 @@
             </objects>
             <point key="canvasLocation" x="4164" y="1692"/>
         </scene>
-        <!--Add Location-->
-        <scene sceneID="W5o-lW-CsY">
+        <!--AddLocation-->
+        <scene sceneID="u00-M0-gsN">
             <objects>
-                <viewController id="TNc-pa-TBI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MpR-Ea-6Fu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="gT0-NB-s6b"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Location" id="akM-LA-7lB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n2B-Mv-Mbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AddLocation" id="eLK-B6-F19" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOY-Cb-qQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4164" y="-352"/>
+            <point key="canvasLocation" x="4148" y="-307"/>
         </scene>
     </scenes>
     <resources>

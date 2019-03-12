@@ -10,8 +10,8 @@ import UIKit
 
 class MoreDaysTVController: UITableViewController {
     
-    var selectedLocation: Location?
-    var ImportedLocation = [Location]()
+    var selectedLocation: LocationData?
+    var ImportedLocation = [LocationData]()
     var MoreDaysForecast = [DailyWeatherData]()
     //    {
     //        didSet {

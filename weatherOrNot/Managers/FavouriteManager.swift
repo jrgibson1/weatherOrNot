@@ -20,7 +20,7 @@ class FavouriteManager {
     
     static let shared = FavouriteManager()
     
-    func saveLocation(location: Location?) {
+    func saveLocation(location: LocationData?) {
         if let location = location {
             let locationDictionary: [String: Any?] = [
                 "locationName": location.locationName,
@@ -35,13 +35,13 @@ class FavouriteManager {
         defaults.set(forecast.rawValue, forKey: "forecastType")
     }
     
-    func retrieveLocation() -> Location? {
+    func retrieveLocation() -> LocationData? {
         if let locationDictionary = defaults.value(forKey: "location") as? [String: Any?] {
             if let locationName = locationDictionary["locationName"] as? String,
                 let countryName = locationDictionary["countryName"] as? String,
                 let longitude = locationDictionary["longitude"] as? Double,
                 let latitude = locationDictionary["latitude"] as? Double {
-                return Location(locationName: locationName, countryName: countryName, longitude: longitude, latitude: latitude)
+                return LocationData(locationName: locationName, countryName: countryName, longitude: longitude, latitude: latitude)
             }
         }
         return nil

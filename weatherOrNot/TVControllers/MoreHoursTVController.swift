@@ -10,8 +10,8 @@ import UIKit
 
 class MoreHoursTVController: UITableViewController {
     
-    var selectedLocation: Location?
-    var ImportedLocation = [Location]()
+    var selectedLocation: LocationData?
+    var ImportedLocation = [LocationData]()
     var MoreHoursForecast = [HourlyWeatherData](){
         didSet {
             self.tableView.reloadData()

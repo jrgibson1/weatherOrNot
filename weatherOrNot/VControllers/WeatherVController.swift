@@ -51,8 +51,8 @@ class WeatherVController: UIViewController {
     @IBOutlet weak var dailyWeatherCollection: UICollectionView!
     @IBOutlet weak var tapMoreDaysButton: UIButton!
     
-    var selectedLocation: Location?
-    var ImportedLocation = [Location]()
+    var selectedLocation: LocationData?
+    var ImportedLocation = [LocationData]()
     var hourlyWeather = [HourlyWeatherData]() {
         didSet {
             self.hourlyWeatherCollection.reloadData()

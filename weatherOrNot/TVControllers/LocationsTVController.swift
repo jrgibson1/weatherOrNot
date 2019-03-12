@@ -22,7 +22,11 @@ class LocationsTVContoller: UITableViewController {
         
         applyTheme()
         whatsNewIfNeeded()
-    }
+        
+        LocationFunctions.readLocations() {
+            self.tableView.reloadData()
+            }
+        }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -111,7 +115,7 @@ class LocationsTVContoller: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return locations.count
+            return Data.locationModels.count
         } else {
             return 0
         }
@@ -119,7 +123,7 @@ class LocationsTVContoller: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationsTVCell
-        let location = locations[indexPath.row]
+        let location = Data.locationModels[indexPath.row]
         
         cell.backgroundColor = Theme.current.backgroundColour
         cell.LocationLabel.text = "\(location.locationName)"
@@ -148,15 +152,15 @@ class LocationsTVContoller: UITableViewController {
         default:
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationVC = segue.destination as! WeatherVController
-                destinationVC.selectedLocation = locations[indexPath.row]
+                destinationVC.selectedLocation = Data.locationModels[indexPath.row]
             }
         }
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt
         fromIndexPath: IndexPath, to: IndexPath) {
-        let movedLocation = locations.remove(at: fromIndexPath.row)
-        locations.insert(movedLocation, at: to.row)
+        let movedLocation = Data.locationModels.remove(at: fromIndexPath.row)
+        Data.locationModels.insert(movedLocation, at: to.row)
         tableView.reloadData()
     }
     

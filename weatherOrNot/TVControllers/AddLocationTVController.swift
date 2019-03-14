@@ -18,6 +18,19 @@ class AddLocationTVController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        applyTheme()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        applyTheme()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -86,5 +99,29 @@ class AddLocationTVController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func applyTheme() {
+        view.backgroundColor = Theme.current.backgroundColour
+        navigationController?.navigationBar.tintColor = Theme.current.tintColour
+        
+        let navigationBar = self.navigationController?.navigationBar
+        navigationBar?.barTintColor = Theme.current.backgroundColour
+        navigationBar?.isTranslucent = false
+        navigationBar?.tintColor = Theme.current.textColour
+        let miniTheme = [
+            NSAttributedString.Key.foregroundColor: Theme.current.textColour
+        ]
+        navigationBar?.titleTextAttributes = miniTheme
+        navigationBar?.largeTitleTextAttributes = miniTheme
+        
+        let barColor = Theme.current.backgroundColour
+        let pressedTintColor = Theme.current.tintColour
+        UITabBar.appearance().barTintColor = barColor
+        UITabBar.appearance().tintColor = pressedTintColor
+    }
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
 
 }

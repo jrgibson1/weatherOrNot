@@ -50,6 +50,7 @@
 		F3D561F122177A6B00DB696A /* Hours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D561F022177A6B00DB696A /* Hours.storyboard */; };
 		F3D561F322177AE400DB696A /* Days.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D561F222177AE400DB696A /* Days.storyboard */; };
 		F3D561FF22187A1200DB696A /* CDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3D561FD22187A1200DB696A /* CDModel.xcdatamodeld */; };
+		F3FBD0E8223A266D0020BFC9 /* AddLocationVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FBD0E7223A266D0020BFC9 /* AddLocationVController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		F3D561F022177A6B00DB696A /* Hours.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hours.storyboard; sourceTree = "<group>"; };
 		F3D561F222177AE400DB696A /* Days.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Days.storyboard; sourceTree = "<group>"; };
 		F3D561FE22187A1200DB696A /* CDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDModel.xcdatamodel; sourceTree = "<group>"; };
+		F3FBD0E7223A266D0020BFC9 /* AddLocationVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationVController.swift; sourceTree = "<group>"; };
 		FD2BE1AAD4695557456343EF /* Pods_weatherOrNot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherOrNot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -333,6 +335,7 @@
 			children = (
 				F33A87F721E202F50039A777 /* WeatherVController.swift */,
 				F3C4D89D21FAB4BC00CA1E34 /* SettingsVController.swift */,
+				F3FBD0E7223A266D0020BFC9 /* AddLocationVController.swift */,
 			);
 			path = VControllers;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				F313199E21FE2C8F00B520A0 /* MoreHoursTVController.swift in Sources */,
 				F388C23B2232DBBE00E44EF9 /* LocationFunction.swift in Sources */,
 				F33A880821E203100039A777 /* FavouriteManager.swift in Sources */,
+				F3FBD0E8223A266D0020BFC9 /* AddLocationVController.swift in Sources */,
 				F33A880A21E204DE0039A777 /* ForecastManager.swift in Sources */,
 				F3B1E9B021E5D38F0024DFD0 /* HourlyCVCell.swift in Sources */,
 				F37D3DAE21FEE1910081E201 /* MoreDaysTVCell.swift in Sources */,
